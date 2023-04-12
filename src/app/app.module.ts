@@ -1,16 +1,28 @@
+import { AngularFireModule } from '@angular/fire/compat';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp({
+        apiKey: "x",
+        authDomain: "x",
+        projectId: "x",
+        storageBucket: "x",
+        messagingSenderId: "x",
+        appId: "x"
+
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
